@@ -1,0 +1,12 @@
+version: '3'
+services:
+  demo_front:
+    build:
+      context: ./RentWheelz
+    ports:
+      - "8080:8080"
+  demo_server:
+    build:
+      context: ./server
+    ports:
+      - "3000:3000"

@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: black;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: 'Karla', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.main {
+  background-color: aliceblue;
+}
+
+.section-title {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header a,
+.header h1,
+.hero p,
+.hero h1 {
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a:hover::after {
+  content: '';
+  height: 5px;
+  position: absolute;
+  top: 120%;
+  background-color: white;
+  right: 0;
+  left: 0;
+}
+
+.active::after {
+  content: '';
+  height: 5px;
+  position: absolute;
+  top: 120%;
+  background-color: white;
+  right: 0;
+  left: 0;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  background-image: url("car-cover.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+}
+
+.hero .text {
+  width: 50%;
+}
+
+.hero-title {
+  font-size: 50px;
+}
+
+/* card grid */
+.cars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.car-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background-color: white;
+  justify-content: space-between;
+}
+
+.car-card img {
+  width: 100%;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer button {
+  background-color: orange;
+  border: none;
+  padding: 0.4rem;
+}
+
+.card-footer button:hover {
+  background-color: rgb(255, 184, 51);
+  cursor: pointer;
+}
+
+@media (max-width:800px) {
+  .cars {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero .text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width:600px) {
+  .cars {
+    grid-template-columns: 1fr;
+
+    align-items: center;
+  }
+
+  .container {
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+}
