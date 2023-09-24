@@ -5,7 +5,7 @@ export default function Home() {
         <>
             <section className="hero">
                 <div className="text container">
-                    <h1 className="hero-title">Fast And Easy Way To Rent</h1>
+                    <h1 className="hero-title">Machmoucha Drive a car</h1>
                     <h1 className="hero-title">A Branded Car</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ipsa.</p>
                 </div>
