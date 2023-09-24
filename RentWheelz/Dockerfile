@@ -3,6 +3,8 @@ FROM node:18-alpine as build
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
+RUN rm .env
+RUN echo VITE_SERVER_URL=http://ec2-54-175-12-115.compute-1.amazonaws.com:3000 > .env
 COPY . ./
 RUN npm run build
 

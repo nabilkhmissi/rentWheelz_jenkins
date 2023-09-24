@@ -1,5 +1,6 @@
 import axios from "axios";
 
 export function fetchCars() {
-    return axios.get("http://localhost:3000/api/v1/cars")
+    const server_url = import.meta.env.VITE_SERVER_URL
+    return axios.get(`${server_url}/api/v1/cars`)
 }
