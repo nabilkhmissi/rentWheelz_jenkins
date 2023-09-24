@@ -1,8 +1,26 @@
+
+import { useEffect, useRef } from "react"
 import { Link, NavLink } from "react-router-dom"
 
 export default function Header() {
+
+    const header = useRef<any>(null);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            const headerElement = header.current;
+            const scrollY = window.scrollY;
+            if (scrollY > 200) {
+                headerElement.style.backgroundColor = "white"
+            } else {
+                headerElement.style.backgroundColor = "transparent"
+                headerElement.style.backdropFilter = "none"
+            }
+        })
+    }, [])
+
     return (
-        <div className="header">
+        <div className="header" ref={header}>
             <Link to='' className="logo">
                 <h1>RentWheels</h1>
             </Link>

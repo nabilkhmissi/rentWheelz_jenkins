@@ -7,6 +7,7 @@
   font-family: 'Karla', sans-serif;
   font-family: 'Montserrat', sans-serif;
   font-family: 'Poppins', sans-serif;
+  transition: all .2s ease-out;
 }
 
 a {
@@ -23,6 +24,10 @@ h2 {
 
 h3 {
   font-size: 25px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .main {
@@ -45,14 +50,18 @@ h3 {
   align-items: center;
   padding: 1rem 5%;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
+  z-index: 10;
   top: 0;
   right: 0;
   left: 0;
 }
 
 .header a,
-.header h1,
+.header h1 {
+  color: black;
+}
+
 .hero p,
 .hero h1 {
   color: white;
@@ -73,9 +82,17 @@ h3 {
   height: 5px;
   position: absolute;
   top: 120%;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   right: 0;
   left: 0;
+}
+
+.nav-actions button {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  outline: none;
 }
 
 .active::after {
@@ -83,7 +100,7 @@ h3 {
   height: 5px;
   position: absolute;
   top: 120%;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   right: 0;
   left: 0;
 }
@@ -97,7 +114,7 @@ h3 {
 .hero {
   display: flex;
   align-items: center;
-  background-image: url("car-cover.jpg");
+  background-image: url("/images/hero.jpg");
   height: 100vh;
   background-size: cover;
   background-position: top;
@@ -108,7 +125,7 @@ h3 {
 }
 
 .hero-title {
-  font-size: 50px;
+  font-size: 80px;
 }
 
 /* card grid */
@@ -147,7 +164,7 @@ h3 {
   cursor: pointer;
 }
 
-@media (max-width:800px) {
+@media (max-width:900px) {
   .cars {
     grid-template-columns: 1fr 1fr;
   }
@@ -159,6 +176,11 @@ h3 {
 
   .nav-links {
     display: none;
+  }
+
+
+  .hero-title {
+    font-size: 60px;
   }
 }
 
@@ -172,5 +194,9 @@ h3 {
   .container {
     padding-right: 2%;
     padding-left: 2%;
+  }
+
+  .hero-title {
+    font-size: 40px;
   }
 }

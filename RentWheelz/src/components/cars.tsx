@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import CardCard from "./car-card"
 import { fetchCars } from "../service"
+import CardCard from "./car-card"
 import { Car } from "../models/car.model"
 
 export default function Cars() {
